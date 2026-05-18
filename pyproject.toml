@@ -1,0 +1,16 @@
+[project]
+name = "alidns-mcp-server"
+version = "0.1.0"
+description = "Alibaba Cloud DNS MCP Server - manage domain DNS records"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp[cli]>=1.0.0",
+    "alibabacloud_alidns20150109>=4.0.0",
+]
+
+[project.scripts]
+alidns-mcp-server = "alidns_mcp_server.server:run"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
